@@ -16,8 +16,9 @@ Product.belongsTo(Category,{
 
 // Products belongToMany Tags (through ProductTag)
 
-Product.hasMany(Tag, {through: ProductTag});
-Tag.hasMany(Product,{through: ProductTag});
+
+Product.belongsToMany(Tag, {through: ProductTag});
+Tag.belongsToMany(Product,{through: ProductTag});
 
 // Tags belongToMany Products (through ProductTag)
 
